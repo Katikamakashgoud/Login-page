@@ -1,0 +1,90 @@
+import { styled } from '@mui/material/styles';
+import { Box, Container, Paper, Typography, TextField, Button, IconButton } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+
+export const ResetPasswordContainer = styled(Container)(({ theme }: { theme: Theme }) => ({
+  marginTop: theme.spacing(8),
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  minHeight: '100vh',
+  background: theme.palette.mode === 'dark'
+    ? 'linear-gradient(45deg, #1a237e 30%, #880e4f 90%)'
+    : 'linear-gradient(45deg, #1976d2 30%, #dc004e 90%)',
+  padding: theme.spacing(3),
+  borderRadius: theme.spacing(2),
+  transition: 'all 0.3s ease-in-out',
+}));
+
+export const ResetPasswordPaper = styled(Paper)(({ theme }: { theme: Theme }) => ({
+  padding: theme.spacing(4),
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+  borderRadius: theme.spacing(2),
+  position: 'relative',
+  overflow: 'hidden',
+  animation: 'fadeIn 0.5s ease-in-out',
+  '@keyframes fadeIn': {
+    '0%': {
+      opacity: 0,
+      transform: 'translateY(20px)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+  },
+}));
+
+export const ResetPasswordTitle = styled(Typography)(({ theme }: { theme: Theme }) => ({
+  marginBottom: theme.spacing(3),
+  fontWeight: 'bold',
+  animation: 'slideIn 0.5s ease-in-out',
+  '@keyframes slideIn': {
+    '0%': {
+      opacity: 0,
+      transform: 'translateX(-20px)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateX(0)',
+    },
+  },
+}));
+
+export const ResetPasswordForm = styled('form')(({ theme }: { theme: Theme }) => ({
+  marginTop: theme.spacing(1),
+  width: '100%',
+  animation: 'fadeIn 0.5s ease-in-out 0.2s both',
+}));
+
+export const StyledTextField = styled(TextField)(({ theme }: { theme: Theme }) => ({
+  marginBottom: theme.spacing(2),
+  '& .MuiOutlinedInput-root': {
+    transition: 'all 0.3s ease-in-out',
+    '&:hover': {
+      transform: 'translateY(-2px)',
+    },
+  },
+}));
+
+export const PasswordVisibilityButton = styled(IconButton)(({ theme }: { theme: Theme }) => ({
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.1)',
+  },
+}));
+
+export const ResetButton = styled(Button)(({ theme }: { theme: Theme }) => ({
+  height: '48px',
+  borderRadius: '24px',
+  textTransform: 'none',
+  fontSize: '1.1rem',
+  transition: 'all 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'translateY(-2px)',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+  },
+})); 

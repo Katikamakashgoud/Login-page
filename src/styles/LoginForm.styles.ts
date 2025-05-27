@@ -1,0 +1,142 @@
+import { styled } from '@mui/material/styles';
+import { Box, Container, Paper, Typography, TextField, Button, IconButton, Link } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+
+export const LoginContainer = styled(Container)(({ theme }: { theme: Theme }) => ({
+  marginTop: theme.spacing(8),
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  minHeight: '100vh',
+  background: theme.palette.mode === 'dark'
+    ? 'linear-gradient(45deg, #1a237e 30%, #880e4f 90%)'
+    : 'linear-gradient(45deg, #1976d2 30%, #dc004e 90%)',
+  padding: theme.spacing(3),
+  borderRadius: theme.spacing(2),
+  transition: 'all 0.3s ease-in-out',
+}));
+
+export const ThemeToggleButton = styled(IconButton)(({ theme }: { theme: Theme }) => ({
+  position: 'absolute',
+  top: 16,
+  right: 16,
+  color: 'white',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'rotate(180deg)',
+  },
+}));
+
+export const LoginPaper = styled(Paper)(({ theme }: { theme: Theme }) => ({
+  padding: theme.spacing(4),
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+  borderRadius: theme.spacing(2),
+  position: 'relative',
+  overflow: 'hidden',
+  animation: 'fadeIn 0.5s ease-in-out',
+  '@keyframes fadeIn': {
+    '0%': {
+      opacity: 0,
+      transform: 'translateY(20px)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+  },
+}));
+
+export const LockIconBox = styled(Box)(({ theme }: { theme: Theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  borderRadius: '50%',
+  padding: theme.spacing(2),
+  marginBottom: theme.spacing(2),
+  animation: 'pulse 2s infinite',
+  '@keyframes pulse': {
+    '0%': { transform: 'scale(1)' },
+    '50%': { transform: 'scale(1.05)' },
+    '100%': { transform: 'scale(1)' },
+  },
+}));
+
+export const LoginTitle = styled(Typography)(({ theme }: { theme: Theme }) => ({
+  marginBottom: theme.spacing(3),
+  fontWeight: 'bold',
+  animation: 'slideIn 0.5s ease-in-out',
+  '@keyframes slideIn': {
+    '0%': {
+      opacity: 0,
+      transform: 'translateX(-20px)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateX(0)',
+    },
+  },
+}));
+
+export const LoginForm = styled('form')(({ theme }: { theme: Theme }) => ({
+  marginTop: theme.spacing(1),
+  width: '100%',
+  animation: 'fadeIn 0.5s ease-in-out 0.2s both',
+}));
+
+export const StyledTextField = styled(TextField)(({ theme }: { theme: Theme }) => ({
+  marginBottom: theme.spacing(2),
+  '& .MuiOutlinedInput-root': {
+    transition: 'all 0.3s ease-in-out',
+    '&:hover': {
+      transform: 'translateY(-2px)',
+    },
+  },
+}));
+
+export const PasswordVisibilityButton = styled(IconButton)(({ theme }: { theme: Theme }) => ({
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.1)',
+  },
+}));
+
+export const LoginButton = styled(Button)(({ theme }: { theme: Theme }) => ({
+  position: 'absolute',
+  transition: 'all 0.3s ease-in-out',
+  height: '48px',
+  borderRadius: '24px',
+  textTransform: 'none',
+  fontSize: '1.1rem',
+  '&:hover': {
+    transform: 'translateY(-2px)',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+  },
+}));
+
+export const SocialLoginBox = styled(Box)(({ theme }: { theme: Theme }) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  gap: theme.spacing(2),
+  marginBottom: theme.spacing(2),
+  '& .MuiIconButton-root': {
+    transition: 'all 0.3s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.1) rotate(5deg)',
+    },
+  },
+}));
+
+export const SignupLink = styled(Link)(({ theme }: { theme: Theme }) => ({
+  fontWeight: 'bold',
+  transition: 'all 0.3s ease-in-out',
+  '&:hover': {
+    color: theme.palette.primary.main,
+    transform: 'scale(1.05)',
+  },
+}));
+
+export const SignupText = styled(Typography)(({ theme }: { theme: Theme }) => ({
+  marginTop: theme.spacing(2),
+  animation: 'fadeIn 0.5s ease-in-out 0.4s both',
+})); 
